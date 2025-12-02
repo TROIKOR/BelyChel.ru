@@ -10,86 +10,97 @@
             background-color: #ffffff; /* Белый фон */
             color: #000000; /* Черный текст */
             margin: 0;
-            padding: 40px; /* Увеличиваем общий отступ */
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center; /* Центрируем всё по горизонтали */
-            min-height: 400vh; /* Делаем страницу ОЧЕНЬ длинной */
+            min-height: 200vh; /* Делаем страницу очень длинной */
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center; /* Центрируем логотип */
+            width: 100%; /* Занимает всю ширину, чтобы центрирование сработало */
+            margin-bottom: 30px;
         }
         .logo {
-            width: 125%; /* Огромный логотип */
-            max-width: 1000px; /* Максимальная ширина, чтобы не разваливался */
-            height: auto;
-            margin-bottom: 75px; /* Увеличиваем отступ */
+            /* Этот стиль будет переопределен для размера */
+            max-width: 90%; /* Максимальная ширина, чтобы не выходить за пределы */
+            width: auto; /* Автоматическая ширина */
+            height: auto; /* Автоматическая высота */
             display: block; /* Чтобы margin работал */
-            margin-left: auto; /* Центрируем изображение */
-            margin-right: auto;
+            border: 5px solid #ff0000; /* Добавим красную рамку для "ужасности" */
+            padding: 10px;
+            box-sizing: border-box;
         }
         .main-text {
-            font-size: 6.25em; /* Увеличиваем в 2.5 раза */
+            font-size: 2.5em; /* Очень большой текст */
             text-align: center;
-            margin-bottom: 125px; /* Увеличиваем отступ */
-            padding: 50px; /* Увеличиваем отступ */
+            margin-bottom: 50px;
+            padding: 20px;
+            border: 2px dashed #000000; /* Ужасная рамка */
             width: 80%; /* Широкий блок */
-            max-width: 2000px; /* Ограничение ширины */
+            max-width: 800px;
         }
         .product-title {
-            font-size: 8.75em; /* Увеличиваем в 2.5 раза */
-            margin-top: 125px; /* Увеличиваем отступ */
-            margin-bottom: 75px; /* Увеличиваем отступ */
+            font-size: 4.5em; /* Огромный заголовок, теперь он ближе к размеру заголовка */
+            margin-top: 50px;
+            margin-bottom: 30px;
             text-align: center;
+            text-decoration: underline; /* Подчеркивание */
+            color: #ff0000; /* Яркий цвет для заголовка */
         }
         .product-description {
-            font-size: 5.5em; /* Увеличиваем в 2.5 раза */
+            font-size: 2.2em; /* Очень большой текст описания */
             text-align: center;
-            margin-bottom: 150px; /* Увеличиваем отступ */
-            padding: 75px; /* Увеличиваем отступ */
+            margin-bottom: 60px;
+            padding: 30px;
+            border: 3px double #000000; /* Еще одна ужасная рамка */
             width: 75%;
-            max-width: 1750px;
+            max-width: 700px;
         }
         .offer-section {
             width: 90%;
-            max-width: 2250px; /* Увеличиваем максимальную ширину */
+            max-width: 900px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 125px; /* Увеличиваем отступ */
+            margin-top: 50px;
         }
         .offer-title {
-            font-size: 7.5em; /* Увеличиваем в 2.5 раза */
-            margin-bottom: 50px; /* Увеличиваем отступ */
+            font-size: 3em;
+            margin-bottom: 20px;
             text-align: center;
         }
         .offer-input {
             width: 100%;
-            height: 375px; /* Увеличиваем в 2.5 раза */
-            font-size: 5em; /* Увеличиваем в 2.5 раза */
-            padding: 50px; /* Увеличиваем отступ */
-            margin-bottom: 50px; /* Увеличиваем отступ */
+            height: 150px; /* Огромное поле ввода */
+            font-size: 2em; /* Большой шрифт в поле */
+            padding: 20px;
+            margin-bottom: 20px;
             box-sizing: border-box; /* Чтобы padding не влиял на общую ширину */
-            border: 2px solid #000000; /* Оставляем тонкую черную рамку, как минимальное обозначение поля */
+            border: 2px solid #000000;
             text-align: center;
             resize: none; /* Запрещаем изменение размера */
         }
         .submit-button {
-            font-size: 6.25em; /* Увеличиваем в 2.5 раза */
-            padding: 75px 125px; /* Увеличиваем в 2.5 раза */
+            font-size: 2.5em; /* Огромная кнопка */
+            padding: 30px 50px;
             background-color: #ffffff;
             color: #000000;
-            border: 4px solid #000000; /* Оставляем рамку */
+            border: 4px solid #000000;
             cursor: pointer;
             transition: background-color 0.3s ease;
             width: 60%; /* Большая ширина кнопки */
-            max-width: 1000px; /* Увеличиваем максимальную ширину */
+            max-width: 400px;
         }
         .submit-button:hover {
             background-color: #f0f0f0; /* Легкое изменение при наведении */
         }
         .footer {
-            margin-top: 250px; /* Увеличиваем отступ */
-            font-size: 4.5em; /* Увеличиваем в 2.5 раза */
+            margin-top: 100px; /* Отступ сверху */
+            font-size: 1.8em; /* Большой шрифт в футере */
             text-align: center;
-            padding: 50px; /* Увеличиваем отступ */
+            padding: 20px;
             border-top: 2px solid #000000; /* Рамка сверху */
             width: 100%;
             box-sizing: border-box;
@@ -98,8 +109,10 @@
 </head>
 <body>
 
-    <img src="" alt="Логотип Белого Чела" class="logo">
-
+    <div class="logo-container">
+        <img src="" alt="Логотип Белого Чела" class="logo">
+    </div>
+    
     <p class="main-text">
         <a href="https://www.youtube.com/@NicevyYT" target="_blank" style="color: #000000; text-decoration: underline;">белый чел</a> эта лучший артист тик токир и ютупир всех вримём и нароров он очинь крутой любимый ютубир абажаю его смотреть и вабще крута класна
     </p>
@@ -180,3 +193,4 @@
 
 </body>
 </html>
+
