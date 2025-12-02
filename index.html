@@ -3,194 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Официальный сайт Белого Чела</title>
+    <title>Белый Чел - Официальный Сайт</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif; /* Базовый, ужасный шрифт */
-            background-color: #ffffff; /* Белый фон */
-            color: #000000; /* Черный текст */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: white;
+            color: black;
+            line-height: 1.2;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Центрируем всё по горизонтали */
-            min-height: 200vh; /* Делаем страницу очень длинной */
+            min-height: 500vh;
         }
-        .logo-container {
-            display: flex;
-            justify-content: center; /* Центрируем логотип */
-            width: 100%; /* Занимает всю ширину, чтобы центрирование сработало */
-            margin-bottom: 30px;
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
         }
+        
         .logo {
-            /* Этот стиль будет переопределен для размера */
-            max-width: 90%; /* Максимальная ширина, чтобы не выходить за пределы */
-            width: auto; /* Автоматическая ширина */
-            height: auto; /* Автоматическая высота */
-            display: block; /* Чтобы margin работал */
-            border: 5px solid #ff0000; /* Добавим красную рамку для "ужасности" */
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        .main-text {
-            font-size: 2.5em; /* Очень большой текст */
-            text-align: center;
-            margin-bottom: 50px;
-            padding: 20px;
-            border: 2px dashed #000000; /* Ужасная рамка */
-            width: 80%; /* Широкий блок */
-            max-width: 800px;
-        }
-        .product-title {
-            font-size: 4.5em; /* Огромный заголовок, теперь он ближе к размеру заголовка */
-            margin-top: 50px;
-            margin-bottom: 30px;
-            text-align: center;
-            text-decoration: underline; /* Подчеркивание */
-            color: #ff0000; /* Яркий цвет для заголовка */
-        }
-        .product-description {
-            font-size: 2.2em; /* Очень большой текст описания */
-            text-align: center;
-            margin-bottom: 60px;
-            padding: 30px;
-            border: 3px double #000000; /* Еще одна ужасная рамка */
-            width: 75%;
-            max-width: 700px;
-        }
-        .offer-section {
-            width: 90%;
-            max-width: 900px;
+            width: 100%;
+            height: 600px;
+            margin: 50px auto;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            margin-top: 50px;
-        }
-        .offer-title {
-            font-size: 3em;
-            margin-bottom: 20px;
+            justify-content: center;
             text-align: center;
         }
-        .offer-input {
-            width: 100%;
-            height: 150px; /* Огромное поле ввода */
-            font-size: 2em; /* Большой шрифт в поле */
-            padding: 20px;
-            margin-bottom: 20px;
-            box-sizing: border-box; /* Чтобы padding не влиял на общую ширину */
-            border: 2px solid #000000;
-            text-align: center;
-            resize: none; /* Запрещаем изменение размера */
+        
+        .logo img {
+            width: 2400px;
+            height: 1200px;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
-        .submit-button {
-            font-size: 2.5em; /* Огромная кнопка */
-            padding: 30px 50px;
-            background-color: #ffffff;
-            color: #000000;
-            border: 4px solid #000000;
+        
+        .main-text {
+            font-size: 48px;
+            margin-bottom: 150px;
+            text-align: center;
+        }
+        
+        .main-text a {
+            color: black;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+        .section-title {
+            font-size: 72px;
+            margin: 100px 0 50px;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+        
+        .products {
+            font-size: 42px;
+            margin-bottom: 200px;
+            line-height: 1.8;
+            padding-left: 100px;
+        }
+        
+        .idea-section {
+            margin-top: 150px;
+            margin-bottom: 200px;
+        }
+        
+        .idea-title {
+            font-size: 65px;
+            margin-bottom: 80px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .idea-input {
+            width: 90%;
+            height: 300px;
+            font-size: 40px;
+            padding: 30px;
+            margin: 0 auto 50px;
+            display: block;
+            border: 8px solid black;
+        }
+        
+        .send-button {
+            display: block;
+            margin: 0 auto;
+            font-size: 55px;
+            padding: 40px 150px;
+            background-color: black;
+            color: white;
+            border: none;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 60%; /* Большая ширина кнопки */
-            max-width: 400px;
         }
-        .submit-button:hover {
-            background-color: #f0f0f0; /* Легкое изменение при наведении */
+        
+        .send-button:hover {
+            background-color: #333;
         }
+        
         .footer {
-            margin-top: 100px; /* Отступ сверху */
-            font-size: 1.8em; /* Большой шрифт в футере */
+            font-size: 38px;
             text-align: center;
-            padding: 20px;
-            border-top: 2px solid #000000; /* Рамка сверху */
-            width: 100%;
-            box-sizing: border-box;
+            margin-top: 250px;
+            margin-bottom: 150px;
+            padding-top: 100px;
+            border-top: 15px solid black;
+        }
+        
+        .spacer {
+            height: 300px;
+        }
+        
+        .big-spacer {
+            height: 500px;
+        }
+        
+        @media (max-width: 1200px) {
+            .logo {
+                height: 450px;
+            }
+            
+            .logo img {
+                width: 1800px;
+                height: 900px;
+            }
+            
+            .main-text {
+                font-size: 36px;
+            }
+            
+            .section-title {
+                font-size: 55px;
+            }
+            
+            .products {
+                font-size: 32px;
+            }
+            
+            .idea-title {
+                font-size: 50px;
+            }
+            
+            .idea-input {
+                height: 250px;
+                font-size: 32px;
+            }
+            
+            .send-button {
+                font-size: 45px;
+                padding: 30px 100px;
+            }
+            
+            .footer {
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .logo {
+                height: 300px;
+                margin: 30px auto;
+            }
+            
+            .logo img {
+                width: 1200px;
+                height: 600px;
+            }
+            
+            .main-text {
+                font-size: 28px;
+                margin-bottom: 100px;
+            }
+            
+            .section-title {
+                font-size: 42px;
+                margin: 70px 0 30px;
+            }
+            
+            .products {
+                font-size: 24px;
+                padding-left: 20px;
+                margin-bottom: 150px;
+            }
+            
+            .idea-title {
+                font-size: 38px;
+            }
+            
+            .idea-input {
+                height: 200px;
+                font-size: 24px;
+                padding: 20px;
+                border-width: 5px;
+            }
+            
+            .send-button {
+                font-size: 35px;
+                padding: 25px 70px;
+            }
+            
+            .footer {
+                font-size: 24px;
+                margin-top: 150px;
+            }
+            
+            .spacer {
+                height: 200px;
+            }
+            
+            .big-spacer {
+                height: 300px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="logo-container">
-        <img src="" alt="Логотип Белого Чела" class="logo">
+    <div class="container">
+        <div class="logo">
+            <!-- Вставьте Logo.png в папку с этим HTML файлом -->
+            <img src="Logo.png" alt="Логотип Белый Чел">
+        </div>
+        
+        <div class="main-text">
+            <a href="https://www.youtube.com/@NicevyYT" target="_blank">белый чел</a> эта лучший артист тик токир и ютупир всех вримём и нароров он очинь крутой любимый ютубир абажаю его смотреть и вабще крута класна
+        </div>
+        
+        <div class="spacer"></div>
+        
+        <div class="section-title">Тавары</div>
+        
+        <div class="products">
+            ээ ии автограф - 681310 тенге (0,51 рубл рускеий)<br><br>
+            патом ээ трэк по ваший идеи - 1000000000000000 долараф<br><br>
+            еще есть супер мега предложение<br><br>
+            купите 2 тавара и получите скидку 0.0000001%!!!!<br><br>
+            это очень выгадно не упустите свой шанц<br><br>
+            акция действуит только до 1637137 августа
+        </div>
+        
+        <div class="big-spacer"></div>
+        
+        <div class="idea-section">
+            <div class="idea-title">предложить идею</div>
+            
+            <textarea class="idea-input" placeholder="Напишите здесь свою гениальную идею для трека..."></textarea>
+            
+            <a href="mailto:beliy.chel.offical@gmail.com?subject=Предложение идеи для трека&body=" id="mailLink">
+                <button class="send-button">ОТПРАВИТЬ ИДЕЮ</button>
+            </a>
+        </div>
+        
+        <div class="big-spacer"></div>
+        <div class="spacer"></div>
+        
+        <div class="footer">
+            белый чел все права защищены 2026<br><br>
+            это официальный сайт самого лучшего артиста<br><br>
+            не копируйте контент а то будете платить 1000000000000000 долараф<br><br>
+            если хотите сотрудничать пишите на почту beliy.chel.offical@gmail.com<br><br>
+            или звоните по номеру +1488.BELYCHEL (звонок платный 100000 тенге)
+        </div>
+        
+        <div class="big-spacer"></div>
     </div>
-    
-    <p class="main-text">
-        <a href="https://www.youtube.com/@NicevyYT" target="_blank" style="color: #000000; text-decoration: underline;">белый чел</a> эта лучший артист тик токир и ютупир всех вримём и нароров он очинь крутой любимый ютубир абажаю его смотреть и вабще крута класна
-    </p>
-
-    <h1 class="product-title">Тавары</h1>
-
-    <p class="product-description">
-        ээ автограф - 681310 тенге (0,51 рубл рускеий) патом ээ трэк по ваший идеи - 1000000000000000 долараф
-    </p>
-
-    <div class="offer-section">
-        <h2 class="offer-title">предлажить идею</h2>
-        <textarea id="ideaInput" class="offer-input" placeholder="Наколякой чё нить (предложка)"></textarea>
-        <a href="mailto:beliy.chel.offical@gmail.com?subject=Новая%20идея%20от%20посетителя&body=ээ%20и%20моя%20эээ во:%0A%0A" class="submit-button" id="submitButton">Отправить</a>
-    </div>
-
-    <footer class="footer">
-        белый чел все права защищены 2026
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       иди нафиг
-    </footer>
 
     <script>
-        const ideaInput = document.getElementById('ideaInput');
-        const submitButton = document.getElementById('submitButton');
-
-        submitButton.addEventListener('click', function(event) {
-            if (ideaInput.value.trim() !== '') {
-                const mailtoLink = `mailto:beliy.chel.offical@gmail.com?subject=Новая%20идея%20от%20посетителя&body=Привет,%20вот%20мой%20предложенная%20идея:%0A%0A${encodeURIComponent(ideaInput.value)}`;
-                window.location.href = mailtoLink;
-            } else {
-                alert('Гавно!');
-                event.preventDefault();
-            }
+        document.addEventListener('DOMContentLoaded', function() {
+            const mailLink = document.getElementById('mailLink');
+            const ideaInput = document.querySelector('.idea-input');
+            
+            mailLink.addEventListener('click', function(e) {
+                const ideaText = ideaInput.value.trim();
+                if (ideaText) {
+                    const encodedText = encodeURIComponent(ideaText);
+                    this.href = `mailto:beliy.chel.offical@gmail.com?subject=Предложение идеи для трека&body=${encodedText}`;
+                } else {
+                    this.href = 'mailto:beliy.chel.offical@gmail.com?subject=Предложение идеи для трека';
+                }
+            });
         });
     </script>
-
 </body>
 </html>
-
